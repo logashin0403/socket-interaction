@@ -31,7 +31,6 @@ def main():
         request = client_socket.recv(1024)
 
         method, path = get_method_and_path_from_request(str(request))
-
         response = DEFAULT_RESPONSE + f"request method: {method}, request path: {path}"
 
         client_socket.sendall(response.encode())
